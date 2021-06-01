@@ -22,7 +22,10 @@ end
 % number of testing points to test error 
 k = 2000;
 
-Newton_interpolation(F, n_list, k,0);
+% option of whether to interpolate randomly(1) or not(0)
+opt = 1;
+
+Newton_interpolation(F, n_list, k,opt);
 
 % use Newton interpolation to approximate a function
 % @F: the function to approximate in [-1,1]
@@ -87,9 +90,5 @@ function Newton_interpolation(F, n_list, k,rand)
         max_errors(index) = max( abs(fu - Nu) );
     end
     
-    % show the max error for each case
-    fprintf('max error for each case is\n');
-    for i = 1 : n_list_col
-        fprintf('%20.12f\n',max_errors(i));
-    end    
+    semilogy(n_list,max_errors);
 end
