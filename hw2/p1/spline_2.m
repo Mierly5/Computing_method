@@ -1,5 +1,6 @@
-% use spline to approximate a function in [-1,1]
-% we set the derivative as 0 on the edge
+% We use spline to approximate a function in [-1,1]
+% Here, funtion's derivative on edge is known,
+% which satisfies boundary condition 2
 % 
 % PB18111679 fanweneddie (from USTC)
 
@@ -13,7 +14,7 @@ F = @(x)sin(4 .* x .^ 2) + (sin(4 .* x)) .^ 2;
 % at most we use 2^10 testing points
 exp_down = 4;
 exp_up = 10;
-% stores the number of points to be inserted
+% stores the log number of points to be inserted
 % here we only use 2^4, 2^5, ... ,2^10 testing points 
 n_list = zeros(1,exp_up - exp_down + 1);
 for i = 1 : exp_up - exp_down + 1
@@ -101,8 +102,8 @@ function spline_boundary_condition_2(F,n_list,k,opt)
     % for opt = 1,
     % plot the max error of each interpolation
     if(opt == 1)
-        X = log(n_list);
-        semilogy(X,max_errors);
+        loglog(n_list,max_errors);
+        grid on;
     end
 end
 
