@@ -31,7 +31,7 @@ opt = 1;
 % call our spline function
 spline_boundary_condition_2(F,n_list,k,opt);
 
-% implementing spline with boundary condition 2
+% implementing spline with boundary condition 3
 % @F: the function to approximate in [-1,1]
 % @n_list: stores the number of intervals in [-1,1]
 % @k: number of testing points in [-1,1]
@@ -67,7 +67,7 @@ function spline_boundary_condition_2(F,n_list,k,opt)
         d = 6 * ( df(2:n) ./ h(2:n) - df(1:n - 1) ./ h(1:n-1) )...
             ./ ( h(1:n-1) + h(2:n) );
     
-        % for boundary condition 2,
+        % for boundary condition 3,
         % get d(0) and d(n)
         m_0 = 0;
         m_n = 0;
