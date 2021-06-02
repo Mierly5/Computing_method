@@ -2,6 +2,7 @@
 % Here, funtion's derivative on edge is known,
 % which satisfies boundary condition 2
 % 
+% Here I 
 % PB18111679 fanweneddie (from USTC)
 
 clear, clc
