@@ -1,3 +1,3 @@
-#This is the computing math course in USTC
+# This is the computing method(aka numerical analysis) course in USTC in 2021 spring
 
-#Our professor is Kuan Xu, who is a really interesting guy.
+## Our professor is Kuan Xu, who is a really strict but interesting guy.
