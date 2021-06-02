@@ -24,8 +24,10 @@ k = 1000;
 
 Lagrange_interpolation(F, L_k_odd, L_k_even, n, k);
 
-% use Newton interpolation to approximate a function
+% use Lagrange interpolation to approximate a function
 % @F: the function to approximate in [-1,1]
+% @L_k_odd: the base function when n is odd
+% @L_k_even: the base function when n is even
 % @n: number of interpolation points
 % @k: number of testing points in [0,1]
 % plot the semilogy of errors
